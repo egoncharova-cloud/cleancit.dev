@@ -6,6 +6,18 @@
 
 Откройте `index.html` напрямую в браузере или запустите любой статический сервер, например `python3 -m http.server 8000`, и перейдите на `http://localhost:8000`.
 
+### Запуск через Docker
+
+```bash
+docker compose up --build -d
+```
+
+После запуска страница доступна по адресу `http://localhost:8080`. Остановить контейнер:
+
+```bash
+docker compose down
+```
+
 ## Структура
 
 ```text
