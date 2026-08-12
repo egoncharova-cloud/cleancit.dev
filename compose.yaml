@@ -1,3 +1,5 @@
+name: cleancit
+
 services:
   cleancit:
     build:
