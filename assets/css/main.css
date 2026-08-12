@@ -31,8 +31,8 @@
 .hero{background:linear-gradient(105deg,#fff 0%,#fff 46%,#f4faff 100%)}
 .hero__grid{min-height:670px;grid-template-columns:minmax(0,1.04fr) minmax(480px,.96fr)}
 .hero__content{padding:9.5rem 1rem 4rem 0}
-.hero__visual{min-height:670px;border-radius:48% 0 0 48%}
-.hero__visual::before{width:14%;background:linear-gradient(90deg,#1f7fe8 0 7%,rgba(255,255,255,.72) 8%,transparent 100%);opacity:1}
+.hero__visual{min-height:670px;border-radius:48% 0 0 48%;border-left:9px solid #66aef5}
+.hero__visual::before{width:14%;background:linear-gradient(90deg,rgba(255,255,255,.68),transparent 100%);opacity:1}
 .hero__visual::after{position:absolute;z-index:1;inset:0;background:linear-gradient(90deg,rgba(240,249,255,.18),transparent 35%);content:""}
 .hero__visual img{filter:brightness(1.06) saturate(.88)}
 .service-card a{display:inline-flex;align-items:center;gap:.45rem}
@@ -56,7 +56,7 @@
   .header__nav ul{align-items:stretch;flex-direction:column;gap:0}
   .hero__grid{min-height:0}
   .hero__content{padding:3rem 0 2.4rem}
-  .hero__visual{min-height:340px}
+  .hero__visual{min-height:340px;border-left:0;border-top:7px solid #66aef5}
   .services .container{width:100%}
   .services .section-title{padding-inline:16px}
   .services__grid{display:flex;gap:16px;overflow-x:auto;padding:4px 16px 24px;scroll-padding-inline:16px;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:thin}
