@@ -30,7 +30,7 @@ assets/
     icons/sprite.svg
     hero/hero.webp
     services/*.webp
-    cta/employee.webp
+    cta/employee-transparent.png
 ```
 
 - `index.html` — семантическая разметка всех компонентов.
