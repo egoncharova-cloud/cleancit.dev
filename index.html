@@ -12,15 +12,36 @@
 <body>
   <a class="skip-link" href="#main">Перейти к содержанию</a>
   <header class="header">
+    <div class="header__info">
+      <div class="container header__info-inner">
+        <a class="header__info-item header__address" href="https://yandex.ru/maps/?text=195043%2C%20Санкт-Петербург%2C%202-я%20Поперечная%20ул.%2C%20д.%2015%2C%20лит.%20А" target="_blank" rel="noopener noreferrer">
+          <svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#pin"/></svg><span>г. Санкт-Петербург, 2-я Поперечная ул., д. 15, лит. А</span>
+        </a>
+        <span class="header__info-item"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#clock"/></svg><span>Круглосуточно, без выходных</span></span>
+        <span class="header__info-item header__phones"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#phone"/></svg><span><a href="tel:+78123139630">+7 (812) 313-96-30</a><a href="tel:+78129221545">+7 (812) 922-15-45</a></span></span>
+        <a class="header__info-item header__email" href="mailto:cleancityspb@mail.ru"><span class="header__mail-icon" aria-hidden="true"></span><span>cleancityspb@mail.ru</span></a>
+      </div>
+    </div>
     <div class="container header__inner">
-      <a class="header__logo" href="#top" aria-label="CleanCit — на главную"><img src="assets/images/logo.svg" width="190" height="48" alt="CleanCit"></a>
+      <a class="header__logo" href="#top" aria-label="Чистый город — на главную"><img src="assets/images/clean-city-logo.png" width="2168" height="725" alt="Чистый город — туалетные кабины, санитарные системы"></a>
       <button class="header__burger" type="button" aria-label="Открыть меню" aria-expanded="false" aria-controls="main-nav"><span></span><span></span><span></span></button>
       <div class="header__panel" id="main-nav">
+        <div class="location-picker">
+          <button class="location-picker__button" type="button" aria-expanded="false" aria-controls="location-menu"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#pin"/></svg><span>Санкт-Петербург</span><span class="location-picker__chevron" aria-hidden="true"></span></button>
+          <ul class="location-picker__menu" id="location-menu">
+            <li><a class="is-current" href="https://www.cleancit.ru/">Санкт-Петербург</a></li>
+            <li><a href="https://www.cleancit.ru/kolpino/">Колпино</a></li><li><a href="https://www.cleancit.ru/kirovsk/">Кировск</a></li><li><a href="https://www.cleancit.ru/murino/">Мурино</a></li><li><a href="https://www.cleancit.ru/pushkin/">Пушкин</a></li><li><a href="https://www.cleancit.ru/zelenogorsk/">Зеленогорск</a></li><li><a href="https://www.cleancit.ru/strelna/">Стрельна</a></li><li><a href="https://www.cleancit.ru/sertolovo/">Сертолово</a></li><li><a href="https://www.cleancit.ru/vsevologsk/">Всеволожск</a></li><li><a href="https://www.cleancit.ru/pavlovsk/">Павловск</a></li><li><a href="https://www.cleancit.ru/gatchina/">Гатчина</a></li><li><a href="https://www.cleancit.ru/sestroreck/">Сестрорецк</a></li><li><a href="https://www.cleancit.ru/petergof/">Петергоф</a></li><li><a href="https://www.cleancit.ru/kommunar/">Коммунар</a></li><li><a href="https://www.cleancit.ru/krasnoe-selo/">Красное Село</a></li>
+          </ul>
+        </div>
         <nav class="header__nav" aria-label="Основная навигация"><ul>
-          <li><a href="#services">Услуги</a></li><li><a href="#services">Аренда</a></li><li><a href="#about">О компании</a></li><li><a href="#workflow">Проекты</a></li><li><a href="#contacts">Контакты</a></li>
+          <li><a href="#services">Услуги</a></li><li><a href="#services">Аренда</a></li><li><a href="#about">О компании</a></li><li><a href="https://www.cleancit.ru/articles/">Статьи</a></li><li><a href="https://www.cleancit.ru/contacts/">Контакты</a></li>
         </ul></nav>
-        <div class="header__phone"><a href="tel:88005554605">8 (800) 555-46-05</a><span>Звонок по России бесплатный</span></div>
-        <a class="btn btn--primary header__cta" href="#consultation">Заказать звонок</a>
+        <div class="header__mobile-info">
+          <a href="mailto:cleancityspb@mail.ru">cleancityspb@mail.ru</a>
+          <span>Круглосуточно, без выходных</span>
+          <span>г. Санкт-Петербург, 2-я Поперечная ул., д. 15, лит. А</span>
+        </div>
+        <button class="btn btn--primary header__cta" type="button" data-callback-open>Заказать звонок</button>
       </div>
     </div>
   </header>
@@ -88,12 +109,31 @@
 
   <footer class="footer" id="contacts"><div class="container">
     <div class="footer__grid">
-      <div class="footer__brand"><img src="assets/images/logo.svg" width="190" height="48" alt="CleanCit"><p>Профессиональные санитарные услуги для бизнеса и частных лиц по всей России.</p><ul class="footer__socials"><li><a href="#" aria-label="ВКонтакте"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#vk"/></svg></a></li><li><a href="#" aria-label="Telegram"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#telegram"/></svg></a></li><li><a href="#" aria-label="YouTube"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#youtube"/></svg></a></li></ul></div>
+      <div class="footer__brand"><img src="assets/images/clean-city-logo.png" width="2168" height="725" alt="Чистый город"><p>Профессиональные санитарные услуги для бизнеса и частных лиц по всей России.</p><ul class="footer__socials"><li><a href="#" aria-label="ВКонтакте"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#vk"/></svg></a></li><li><a href="#" aria-label="Telegram"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#telegram"/></svg></a></li><li><a href="#" aria-label="YouTube"><svg aria-hidden="true"><use href="assets/images/icons/sprite.svg#youtube"/></svg></a></li></ul></div>
       <nav class="footer__nav" aria-label="Услуги"><h2>Услуги</h2><ul><li><a href="#services">Аренда туалетных кабин</a></li><li><a href="#services">Обслуживание туалетных кабин</a></li><li><a href="#services">Аренда парогенератора</a></li><li><a href="#services">Услуги илососа</a></li><li><a href="#services">Доставка технической воды</a></li><li><a href="#services">Откачка выгребных ям</a></li><li><a href="#services">Откачка септиков</a></li><li><a href="#services">Прочистка канализации</a></li></ul></nav>
       <nav class="footer__nav" aria-label="Компания"><h2>Компания</h2><ul><li><a href="#about">О компании</a></li><li><a href="#about">Преимущества</a></li><li><a href="#workflow">Наши клиенты</a></li><li><a href="#workflow">Отзывы</a></li><li><a href="#contacts">Контакты</a></li></ul></nav>
-      <div class="footer__contacts"><h2>Контакты</h2><a class="footer__tel" href="tel:88005554605">8 (800) 555-46-05</a><small>Звонок по России бесплатный</small><a href="mailto:info@cleancit.ru">info@cleancit.ru</a><address><span>г. Москва,</span><span>ул. Промышленная, д. 11</span></address><a class="btn btn--primary" href="#consultation">Заказать звонок</a></div>
+      <div class="footer__contacts"><h2>Контакты</h2><a class="footer__tel" href="tel:+78123139630">+7 (812) 313-96-30</a><a class="footer__tel" href="tel:+78129221545">+7 (812) 922-15-45</a><small>Круглосуточно, без выходных</small><a href="mailto:cleancityspb@mail.ru">cleancityspb@mail.ru</a><address><span>г. Санкт-Петербург,</span><span>2-я Поперечная ул., д. 15, лит. А</span></address><button class="btn btn--primary" type="button" data-callback-open>Заказать звонок</button></div>
     </div>
-    <div class="footer__bottom"><span>© <span data-current-year>2024</span> CleanCit. Все права защищены</span><div><a href="#">Политика конфиденциальности</a><a href="#">Договор оферты</a></div></div>
+    <div class="footer__bottom"><span>© <span data-current-year>2024</span> «Чистый город». Все права защищены</span><div><a href="https://www.cleancit.ru/privacy_policy/">Политика конфиденциальности</a><a href="#">Договор оферты</a></div></div>
   </div></footer>
+
+  <div class="callback-modal" data-callback-modal aria-hidden="true">
+    <div class="callback-modal__backdrop" data-callback-close></div>
+    <section class="callback-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="callback-title" tabindex="-1">
+      <button class="callback-modal__close" type="button" aria-label="Закрыть форму" data-callback-close><span></span><span></span></button>
+      <p class="callback-modal__eyebrow">Заказать обратный звонок</p>
+      <h2 id="callback-title">Оставьте заявку,<br><span>и мы свяжемся с вами</span></h2>
+      <p class="callback-modal__lead">Перезвоним в удобное время, ответим на все вопросы<br>и поможем подобрать решение.</p>
+      <form class="callback-form" data-callback-form>
+        <label><span class="sr-only">Ваше имя</span><input type="text" name="name" autocomplete="name" placeholder="Ваше имя *" required></label>
+        <label><span class="sr-only">Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Телефон *" required></label>
+        <div class="callback-form__row"><label><span class="sr-only">Дата звонка</span><input type="date" name="date" aria-label="Дата звонка"></label><label><span class="sr-only">Время звонка</span><input type="time" name="time" aria-label="Время звонка"></label></div>
+        <label><span class="sr-only">Комментарий</span><textarea name="comment" rows="3" placeholder="Комментарий"></textarea></label>
+        <label class="callback-form__consent"><input type="checkbox" name="consent" required><span>Нажимая на кнопку, я даю согласие на обработку своих персональных данных в соответствии с <a href="https://www.cleancit.ru/consent_to_the_processing_of_personal_data/" target="_blank" rel="noopener noreferrer">Соглашением на обработку персональных данных</a> и <a href="https://www.cleancit.ru/privacy_policy/" target="_blank" rel="noopener noreferrer">Политикой конфиденциальности</a></span></label>
+        <button class="btn btn--primary callback-form__submit" type="submit">Заказать звонок</button>
+        <p class="callback-form__status" role="status" aria-live="polite"></p>
+      </form>
+    </section>
+  </div>
 </body>
 </html>
