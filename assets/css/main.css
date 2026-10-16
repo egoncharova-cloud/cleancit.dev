@@ -190,7 +190,7 @@ body.modal-open{overflow:hidden}
 @media(max-width:380px){.footer__service-area ul{grid-template-columns:1fr}}
 
 /* Main-page content expansion */
-.hero h1{font-size:clamp(2.2rem,2.5vw,2.3rem);white-space:nowrap}
+.hero h1{font-size:clamp(2.3rem,2.7vw,2.55rem);white-space:nowrap}
 .hero h1 span{display:inline;white-space:normal}
 .hero__visual img{object-position:60% 20%}
 .hero__actions button{font-family:inherit}
