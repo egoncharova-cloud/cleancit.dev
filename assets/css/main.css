@@ -190,6 +190,8 @@ body.modal-open{overflow:hidden}
 @media(max-width:380px){.footer__service-area ul{grid-template-columns:1fr}}
 
 /* Main-page content expansion */
+.header{position:relative}
+.hero__content{padding-top:4rem}
 .hero h1{font-size:clamp(2.3rem,2.7vw,2.55rem);white-space:nowrap}
 .hero h1 span{display:inline;white-space:normal}
 .hero__visual img{object-position:60% 20%}
@@ -224,6 +226,7 @@ body.modal-open{overflow:hidden}
 
 @media(max-width:1000px){.licenses__grid{grid-template-columns:repeat(3,minmax(0,1fr))}.company-intro__card{grid-template-columns:1fr;gap:1.5rem}.client-card{grid-template-columns:82px 1fr;padding:2rem}.client-card__icon{width:76px;height:76px}.client-card__icon svg{width:42px;height:42px}}
 @media(max-width:767px){
+  .hero__content{padding-top:3rem}
   .hero h1{font-size:clamp(2rem,9vw,2.8rem);white-space:normal}
   .hero__visual img{object-position:center 20%}
   .company-intro__card{width:calc(100% + 8px);margin-left:-4px;padding:1.7rem 1.35rem}
