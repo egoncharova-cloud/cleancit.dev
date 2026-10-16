@@ -190,8 +190,8 @@ body.modal-open{overflow:hidden}
 @media(max-width:380px){.footer__service-area ul{grid-template-columns:1fr}}
 
 /* Main-page content expansion */
-.hero h1{font-size:clamp(2.35rem,2.65vw,2.45rem)}
-.hero h1 span{white-space:nowrap}
+.hero h1{font-size:clamp(2.2rem,2.5vw,2.3rem);white-space:nowrap}
+.hero h1 span{display:inline;white-space:normal}
 .hero__visual img{object-position:60% center}
 .hero__actions button{font-family:inherit}
 .company-intro__card{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.45fr);gap:clamp(2rem,5vw,5rem);padding:clamp(2rem,4.5vw,4rem);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:linear-gradient(135deg,#f7fbff,#eef7ff);box-shadow:var(--shadow-card)}
@@ -224,8 +224,7 @@ body.modal-open{overflow:hidden}
 
 @media(max-width:1000px){.licenses__grid{grid-template-columns:repeat(3,minmax(0,1fr))}.company-intro__card{grid-template-columns:1fr;gap:1.5rem}.client-card{grid-template-columns:82px 1fr;padding:2rem}.client-card__icon{width:76px;height:76px}.client-card__icon svg{width:42px;height:42px}}
 @media(max-width:767px){
-  .hero h1{font-size:clamp(2rem,9vw,2.8rem)}
-  .hero h1 span{white-space:normal}
+  .hero h1{font-size:clamp(2rem,9vw,2.8rem);white-space:normal}
   .company-intro__card{width:calc(100% + 8px);margin-left:-4px;padding:1.7rem 1.35rem}
   .licenses__grid{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 22px;scroll-snap-type:x mandatory}.licenses__grid a{min-height:240px;flex:0 0:min(70vw,250px);scroll-snap-align:start}.licenses__grid img{height:210px}
   .clients__grid{grid-template-columns:1fr}.client-card{min-height:0}
