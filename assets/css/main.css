@@ -190,7 +190,7 @@ body.modal-open{overflow:hidden}
 @media(max-width:380px){.footer__service-area ul{grid-template-columns:1fr}}
 
 /* Main-page content expansion */
-.hero h1{font-size:clamp(2.45rem,3.7vw,3.55rem)}
+.hero h1{font-size:clamp(2.45rem,3.4vw,3.25rem)}
 .hero__visual img{object-position:60% center}
 .hero__actions button{font-family:inherit}
 .company-intro__card{display:grid;grid-template-columns:minmax(280px,.8fr) minmax(0,1.45fr);gap:clamp(2rem,5vw,5rem);padding:clamp(2rem,4.5vw,4rem);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:linear-gradient(135deg,#f7fbff,#eef7ff);box-shadow:var(--shadow-card)}
