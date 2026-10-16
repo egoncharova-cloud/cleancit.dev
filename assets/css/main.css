@@ -25,6 +25,7 @@
 :root{--section-space:clamp(4.5rem,7vw,6.5rem)}
 .section{padding-block:var(--section-space)}
 .section--compact{padding-block:0 var(--section-space)}
+main>.section+.section{padding-top:0}
 .header{position:absolute;top:0;right:0;left:0;background:transparent}
 .header__nav{display:block;margin-inline:auto}
 .header__nav ul{display:flex;align-items:center;justify-content:center;gap:clamp(1.1rem,2.3vw,2.4rem)}
