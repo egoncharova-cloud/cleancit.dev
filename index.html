@@ -52,7 +52,6 @@
     ym(197550,"init",{clickmap:true,trackLinks:true,accurateTrackBounce:true,webvisor:true});
   </script>
   <!-- /Yandex.Metrika counter -->
-  <link rel="preload" href="assets/images/hero/hero-spb.webp" as="image" type="image/webp">
   <link rel="stylesheet" href="assets/css/main.css?v=20261016-11">
   <script src="assets/js/main.js" defer></script>
 </head>
@@ -107,7 +106,6 @@
             <li><svg><use href="assets/images/icons/sprite.svg#thumb"/></svg><span>Гарантия качества и результата</span></li>
           </ul>
         </div>
-        <div class="hero__visual"><img src="assets/images/hero/hero-spb.webp" width="1600" height="890" alt="Ассенизаторская машина и туалетная кабина на фоне Лахта Центра в Санкт-Петербурге"></div>
       </div>
     </section>
 
@@ -174,9 +172,12 @@
     </section>
 
     <section class="section section--compact" id="consultation"><div class="container"><div class="cta">
-      <div class="cta__content"><h2><span>Нужна помощь или</span> <span>консультация?</span></h2><p>Оставьте заявку, и мы свяжемся с вами в ближайшее время</p><button class="btn btn--light" type="button" data-callback-open>Получить консультацию</button></div>
-      <div class="cta__employee"><img src="assets/images/cta/employee-transparent.png" width="1024" height="1536" alt="Сотрудник CleanCit" loading="lazy"></div>
-      <ul class="cta__list"><li><svg><use href="assets/images/icons/sprite.svg#headset"/></svg>Бесплатная консультация</li><li><svg><use href="assets/images/icons/sprite.svg#clock"/></svg>Расчет стоимости за 15 минут</li><li><svg><use href="assets/images/icons/sprite.svg#tools"/></svg>Индивидуальный подход</li></ul>
+      <div class="cta__content"><h2>Нужна консультация?</h2><p>Оставьте контакты — перезвоним и ответим на ваши вопросы.</p></div>
+      <form class="cta-form" data-quick-callback-form>
+        <div class="cta-form__fields"><label><span class="sr-only">Ваше имя</span><input type="text" name="name" autocomplete="name" placeholder="Ваше имя *" required></label><label><span class="sr-only">Телефон</span><input type="tel" name="phone" autocomplete="tel" inputmode="tel" placeholder="Телефон *" required></label><button class="btn btn--primary" type="submit">Отправить</button></div>
+        <label class="cta-form__consent"><input type="checkbox" name="consent" required><span>Соглашаюсь с <a href="https://www.cleancit.ru/privacy_policy/" target="_blank" rel="noopener noreferrer">политикой конфиденциальности</a></span></label>
+        <p class="cta-form__status" role="status" aria-live="polite"></p>
+      </form>
     </div></div></section>
   </main>
 

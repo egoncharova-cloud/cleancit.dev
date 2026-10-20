@@ -61,7 +61,7 @@ main>.section+.section{padding-top:0}
   .services .container{width:100%}
   .services .section-title{padding-inline:16px}
   .services__grid{display:flex;gap:16px;overflow-x:auto;padding:4px 16px 24px;scroll-padding-inline:16px;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain;scrollbar-width:thin}
-  .service-card{flex:0 0:min(84vw,340px);scroll-snap-align:start}
+  .service-card{width:84vw;max-width:340px;flex:0 0 84vw;scroll-snap-align:start}
   .workflow-step:not(:last-child)::after{top:68px;bottom:auto;left:33px;width:12px;height:28px;background:#a8cdf6;clip-path:polygon(43% 0,57% 0,57% 76%,92% 76%,50% 100%,8% 76%,43% 76%)}
   .cta{margin-top:0;padding:0 1.5rem 2rem;overflow:hidden}
   .cta__employee{position:relative;bottom:auto;left:auto;order:1;width:100%;height:320px;margin:-1px auto 1.5rem;overflow:hidden}
@@ -231,10 +231,47 @@ body.modal-open{overflow:hidden}
 @media(max-width:767px){
   .hero__content{padding-top:3rem}
   .hero h1{font-size:clamp(2rem,9vw,2.8rem);white-space:normal}
-  .hero__visual img{object-position:center 20%}
+  .hero__visual{position:relative;min-height:0;aspect-ratio:16/10;flex:none;border-top-width:6px;border-radius:96px 0 0 0}
+  .hero__visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
   .company-intro__card{width:calc(100% + 8px);margin-left:-4px;padding:1.7rem 1.35rem}
-  .licenses__grid{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 22px;scroll-snap-type:x mandatory}.licenses__grid a{min-height:240px;flex:0 0:min(70vw,250px);scroll-snap-align:start}.licenses__grid img{height:210px}
+  .licenses__grid{display:flex;gap:14px;overflow-x:auto;padding:4px 2px 22px;scroll-padding-inline:2px;scroll-snap-type:x mandatory;overscroll-behavior-inline:contain}.licenses__grid a{width:70vw;max-width:250px;min-height:240px;flex:0 0 70vw;scroll-snap-align:start}.licenses__grid img{height:210px}
   .clients__grid{grid-template-columns:1fr}.client-card{min-height:0}
   .workflow-step{grid-template-columns:70px 1fr;padding:1.1rem}.workflow-step__icon{width:60px;height:60px}.workflow-step:not(:last-child)::after{top:auto;bottom:-1rem;left:40px;width:2px;height:1rem}
 }
-@media(max-width:480px){.client-card{grid-template-columns:1fr;gap:1rem;padding:1.5rem}.client-card__icon{width:68px;height:68px}.client-card__title{margin:0 0 .7rem}.workflow-step{grid-template-columns:56px 1fr;gap:.8rem;padding:1rem .85rem}.workflow-step__icon{width:50px;height:50px}.workflow-step__icon svg{width:25px;height:25px}.workflow-step:not(:last-child)::after{left:34px}.workflow-step b{float:none;display:block;margin:0 0 .25rem}}
+@media(max-width:480px){.hero__visual{min-height:0;aspect-ratio:16/10;border-radius:72px 0 0 0}.client-card{grid-template-columns:1fr;gap:1rem;padding:1.5rem}.client-card__icon{width:68px;height:68px}.client-card__title{margin:0 0 .7rem}.workflow-step{grid-template-columns:56px 1fr;gap:.8rem;padding:1rem .85rem}.workflow-step__icon{width:50px;height:50px}.workflow-step__icon svg{width:25px;height:25px}.workflow-step:not(:last-child)::after{left:34px}.workflow-step b{float:none;display:block;margin:0 0 .25rem}}
+
+/* Tablet hero: keep the content readable instead of squeezing it beside the image */
+@media(min-width:768px) and (max-width:900px){
+  .hero__grid{display:flex;min-height:0;flex-direction:column}
+  .hero__content{width:100%;padding:3rem 0 2.75rem}
+  .hero h1{max-width:680px;font-size:clamp(2.7rem,6.2vw,3.25rem);white-space:normal}
+  .hero__lead{max-width:650px}
+  .hero__actions{flex-wrap:nowrap}
+  .hero__actions .btn{min-width:210px}
+  .hero__benefits{max-width:none;grid-template-columns:repeat(3,minmax(0,1fr));gap:1.5rem;margin-top:2.5rem}
+  .hero__benefits li{font-size:.82rem}
+  .hero__visual{position:relative;width:calc(100% + 48px);height:clamp(310px,42vw,380px);min-height:0;flex:none;align-self:stretch;margin:0 -24px;border-top:7px solid #66aef5;border-left:0;border-radius:120px 0 0 0}
+  .hero__visual img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 32%}
+}
+@media(min-width:901px) and (max-width:1100px){.hero h1{white-space:normal}}
+
+/* Hero without a decorative image */
+.hero__grid{display:block;min-height:0}
+.hero__content{max-width:900px;padding:clamp(3rem,5vw,4.5rem) 0}
+@media(max-width:767px){.hero__content{padding:3rem 0 2.75rem}}
+
+/* Compact consultation form */
+.cta{display:grid;min-height:0;grid-template-columns:minmax(260px,.72fr) minmax(0,1.28fr);gap:clamp(2rem,4vw,4rem);margin-top:0;padding:2.5rem 3rem;overflow:hidden}
+.cta__content p{max-width:390px;margin-bottom:0}
+.cta-form{display:grid;gap:.8rem;padding:1.25rem;border-radius:14px;background:rgba(255,255,255,.96);color:var(--color-text)}
+.cta-form__fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:.75rem}
+.cta-form input:not([type=checkbox]){width:100%;min-height:50px;padding:.75rem 1rem;color:var(--color-text);border:1px solid #bdd3eb;border-radius:8px;background:#fff;font:inherit}
+.cta-form input:not([type=checkbox]):focus{outline:0;border-color:var(--color-primary);box-shadow:0 0 0 3px rgba(23,118,230,.12)}
+.cta-form .btn{min-height:50px;padding-inline:1.5rem}
+.cta-form__consent{display:flex;align-items:flex-start;gap:.55rem;color:#526079;font-size:.7rem;line-height:1.4;cursor:pointer}
+.cta-form__consent input{width:17px;height:17px;flex:none;margin:1px 0 0;accent-color:var(--color-primary)}
+.cta-form__consent a{color:var(--color-primary);text-decoration:underline}
+.cta-form__status{display:none;margin:0;padding:.65rem .8rem;color:#0b6944;border-radius:8px;background:#e9f8f1;font-size:.8rem;text-align:center}
+.cta-form__status.is-visible{display:block}
+@media(max-width:900px){.cta{grid-template-columns:1fr;padding:2rem}.cta__content{text-align:left}.cta h2 span{white-space:normal}.cta-form__fields{grid-template-columns:1fr 1fr}.cta-form .btn{grid-column:1/-1}}
+@media(max-width:560px){.cta{display:grid;gap:1.25rem;padding:1.5rem}.cta__content{text-align:center}.cta__content p{margin-inline:auto}.cta-form{padding:1rem}.cta-form__fields{grid-template-columns:1fr}.cta-form .btn{grid-column:auto}}

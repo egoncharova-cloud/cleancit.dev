@@ -60,6 +60,27 @@
     });
   }
 
+  const bindCallbackForm = (callbackForm, callbackStatus) => {
+    if (!callbackForm) return;
+    callbackForm.addEventListener('submit', (event) => {
+      event.preventDefault();
+      if (!callbackForm.reportValidity()) return;
+      const data = new FormData(callbackForm);
+      const body = [
+        `Имя: ${data.get('name')}`,
+        `Телефон: ${data.get('phone')}`
+      ];
+      if (callbackForm.elements.date) body.push(`Дата звонка: ${data.get('date') || 'не указана'}`);
+      if (callbackForm.elements.time) body.push(`Время звонка: ${data.get('time') || 'не указано'}`);
+      if (callbackForm.elements.comment) body.push(`Комментарий: ${data.get('comment') || '—'}`);
+      if (callbackStatus) {
+        callbackStatus.textContent = 'Заявка подготовлена к отправке в вашей почтовой программе.';
+        callbackStatus.classList.add('is-visible');
+      }
+      window.location.href = `mailto:cleancityspb@mail.ru?subject=${encodeURIComponent('Заказ обратного звонка')}&body=${encodeURIComponent(body.join('\n'))}`;
+    });
+  };
+
   const modal = document.querySelector('[data-callback-modal]');
   const dialog = modal?.querySelector('.callback-modal__dialog');
   const form = modal?.querySelector('[data-callback-form]');
@@ -107,22 +128,8 @@
         first.focus();
       }
     });
-    form.addEventListener('submit', (event) => {
-      event.preventDefault();
-      if (!form.reportValidity()) return;
-      const data = new FormData(form);
-      const callbackDate = data.get('date') || 'не указана';
-      const callbackTime = data.get('time') || 'не указано';
-      const body = [
-        `Имя: ${data.get('name')}`,
-        `Телефон: ${data.get('phone')}`,
-        `Дата звонка: ${callbackDate}`,
-        `Время звонка: ${callbackTime}`,
-        `Комментарий: ${data.get('comment') || '—'}`
-      ].join('\n');
-      status.textContent = 'Заявка подготовлена к отправке в вашей почтовой программе.';
-      status.classList.add('is-visible');
-      window.location.href = `mailto:cleancityspb@mail.ru?subject=${encodeURIComponent('Заказ обратного звонка')}&body=${encodeURIComponent(body)}`;
-    });
+    bindCallbackForm(form, status);
   }
+
+  bindCallbackForm(document.querySelector('[data-quick-callback-form]'), document.querySelector('.cta-form__status'));
 })();
