@@ -3,11 +3,13 @@
   const panel = document.querySelector('.header__panel');
 
   if (button && panel) {
-    const closeMenu = () => {
+    const closeMenu = (restoreFocus = false) => {
+      const wasOpen = button.getAttribute('aria-expanded') === 'true';
       button.setAttribute('aria-expanded', 'false');
       button.setAttribute('aria-label', 'Открыть меню');
       panel.classList.remove('is-open');
       document.body.classList.remove('menu-open');
+      if (restoreFocus && wasOpen) button.focus();
     };
 
     button.addEventListener('click', () => {
@@ -22,13 +24,10 @@
       if (event.target.closest('a')) closeMenu();
     });
     document.addEventListener('keydown', (event) => {
-      if (event.key === 'Escape') {
-        closeMenu();
-        button.focus();
-      }
+      if (event.key === 'Escape') closeMenu(true);
     });
     window.addEventListener('resize', () => {
-      if (window.innerWidth > 767) closeMenu();
+      if (window.innerWidth > 960) closeMenu();
     });
   }
 
@@ -100,11 +99,15 @@
       button?.setAttribute('aria-expanded', 'false');
       button?.setAttribute('aria-label', 'Открыть меню');
       panel?.classList.remove('is-open');
+      document.body.classList.remove('menu-open');
       status.classList.remove('is-visible');
       status.textContent = '';
       modal.classList.add('is-open');
       modal.setAttribute('aria-hidden', 'false');
       document.body.classList.add('modal-open');
+      if (form.elements.date) {
+        form.elements.date.min = new Date().toLocaleDateString('sv-SE');
+      }
       window.setTimeout(() => form.elements.name.focus(), 0);
     };
 
